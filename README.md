@@ -1,2 +1,2 @@
-# ToDo-List
-To-do list with Local Storage.
+Hello,this is my first attempt to create a To-Do list in order to have a better understanding of JavaScript.
+Hope you enjoy it.
