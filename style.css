@@ -5,31 +5,23 @@ body {
   background-repeat: no-repeat;
 }
 
+/* ------------ No Weather ------------ */
+
+
 /* ------------ h1 ------------ */
 h1 {
-  margin: 30px 50px 30px 50px;
+  font-family: 'Mont';
   color: #fff !important;
   text-transform: uppercase;
   text-decoration: none;
   background: transparent;
   padding: 10px;
-  width: 150px;
+  width: 400px;
+  letter-spacing: 1px;
   text-align: center;
-  border-radius: 50px;
   border: none;
-  transition: all 0.4s ease 0s;
-  font-family: 'Indie Flower', cursive;
-  -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.40);
-  -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.20);
-  margin-top: 20px;
-  cursor: pointer;
-}
-
-h1:hover {
-  text-shadow: 0px 0px 6px #FFC0CB;
-  -webkit-box-shadow: 0px 5px 40px 25px #FFC0CB;
-  -moz-box-shadow: 0px 5px 40px 30px #FFC0CB;
-  transition: all 0.5s ease 0s;
+  font-size: 30px;
+  text-shadow: 1px 4px 2px rgb(66, 57, 104);
 }
 
 /* ------------ container ------------ */
@@ -47,21 +39,24 @@ h1:hover {
 
 /* ------------ header ------------ */
 .header {
-  width: 370px;
-  height: 200px;
+  width: 500px;
+  height: 250px;
   background-image: url(https://images.pexels.com/photos/1434608/pexels-photo-1434608.jpeg?auto=compress&cs=tinysrgb&h=650&w=940);
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 15px 15px 0 0;
-  position: relative;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .clear {
-  width: 30px;
+  position:relative;
+  width: 25px;
   height: 30px;
-  position: absolute;
-  right: 20px;
-  top: 20px;
+  bottom:190px;
+  left: 220px;
   text-shadow: 2px 2px #05312f;
 }
 
@@ -77,21 +72,21 @@ h1:hover {
 }
 
 #date {
-  position: absolute;
-  bottom: 2px;
-  right: 8px;
-  color: #FFF;
-  font-size: 20px;
-  text-shadow: 2px 2px rgb(66, 57, 104);
+  bottom: 20px;
+  color: white;
+  font-size: 25px;
   font-family: 'Montserrat';
+  position:relative;
+  text-shadow: 1px 1px 2px black, 0 0 25px rgb(98, 0, 255), 0 0 10px rgb(62, 62, 236);
+
 }
 
 /* ------------ content ------------ */
 .content {
-  width: 370px;
+  width: 500px;
   height: 300px;
   max-height: 350px;
-  background-color: #FFF;
+  background-color: white;
   overflow: auto;
   background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(215, 223, 252, 1) 0%, rgba(255, 255, 255, 1) 0%, rgba(215, 223, 252, 1) 84%);
 }
@@ -106,7 +101,7 @@ h1:hover {
 }
 
 .item {
-  width: 370px;
+  width: 500px;
   height: 45px;
   min-height: 45px;
   position: relative;
@@ -163,7 +158,7 @@ h1:hover {
 /* ------------ add item ------------ */
 .add-to-do {
   position: relative;
-  width: 350px;
+  width: 480px;
   height: 40px;
   background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(215, 223, 252, 1) 0%, rgba(255, 255, 255, 1) 0%, rgba(215, 223, 252, 1) 84%);
   padding: 10px;
@@ -225,31 +220,28 @@ h1:hover {
 }
 
 /* ------------Responsive----------- */
-@media only screen and (max-width:400px) {
-  .header {
-    width: 270px;
-    height: 150px;
-    margin-left: 50px;
-    margin-right: 50px;
+@media only screen and (max-width:500px) {
+  .h1 {
+    visibility: hidden;
   }
 
   .content {
-    width: 270px;
-    height: 250px;
-    margin-left: 50px;
-    margin-right: 50px;
+    width: 100%;
+    height: 100%;
+    position: relative;
   }
 
   .add-to-do {
     height: 35px;
-    width: 250px;
-    margin-left: 50px;
-    margin-right: 50px;
+    width: 100%;
+    padding: 10px 0 10px 0;
+    position: absolute;
+    bottom: 0;
   }
 
   #input {
     height: 35px;
-    width: 215px;
+    width: 80%;
     font-size: 15px;
   }
 
@@ -259,7 +251,7 @@ h1:hover {
   }
 
   .item {
-    width: 280px;
+    width: 100%;
   }
 
   #pencil {
@@ -275,11 +267,125 @@ h1:hover {
 
   .add-to-do input {
     position: absolute;
-    left: 40px;
   }
 
   .item p.text {
     font-size: 15px;
     margin-top: 3px;
   }
+
+  .container {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+  }
+
+  .header {
+    width: 100%;
+    border-radius: 0;
+  }
+
+  h1 {
+    display: none;
+  }
+  .clear{
+    left:200px;
+    bottom: 190px;
+  }
+  .blur-background{
+    width: 200px;
+  }
 }
+
+@media only screen and (max-width:450px) {
+  .clear{
+    left:180px;
+    bottom: 190px;
+  }
+  .blur-background{
+    width: 200px;
+  }
+}
+@media only screen and (max-width:400px) {
+  .clear{
+    left:150px;
+    bottom: 190px;
+  }
+  .blur-background{
+    width: 200px;
+  }
+}
+@media only screen and (max-width:350px) {
+  .clear{
+    left:130px;
+    bottom: 190px;
+  }
+  .blur-background{
+    width: 200px;
+  }
+}
+/* ------------ ++Weather ------------ */
+.blur-background{
+  width: 300px;
+  height: 175px;
+  background:inherit;
+  border-radius: 20px;
+  z-index: 0;
+  position: absolute;
+  opacity: .5;
+  box-shadow: #4162f6;
+}
+.weather-container{
+  height: 175px;
+  width: 300px;
+  margin-top: 50px;
+  border-radius: 20px;
+  z-index: 10;
+}
+.weather-container p{
+  margin:10px 0 10px 0;
+  font-size: 15px;
+  color: white;
+  text-align: center;
+  color:white;
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+}
+
+.weather-icon{
+  text-align: center;
+  margin:10px 0 10px 0;
+}
+
+.weather-icon img{
+  padding: 0;
+  margin: 0;
+  margin-top:-5px;
+  width: 90px;
+  margin-bottom:5px;
+  
+}
+
+.temperature-value p{
+  font-size: 20px;
+  margin-top:-20px;
+  font-family: 'Montserrat';
+  color:white;
+  text-shadow: 1px 1px 2px black, 0 0 25px rgb(98, 0, 255), 0 0 10px rgb(62, 62, 236);
+}
+
+.temperature-description p{
+  font-size: px;
+  margin:10px 0 10px 0;
+  color:white;
+  text-shadow: 1px 1px 2px black, 0 0 25px rgb(98, 0, 255), 0 0 5px rgb(62, 62, 236);
+}
+
+
+.location{
+  font-size:15px;
+  margin-bottom:10px;
+  font-family: 'Montserrat';
+  color:white;
+  text-shadow: 1px 1px 2px black, 0 0 25px rgb(98, 0, 255), 0 0 5px rgb(62, 62, 236);
+}
+
